@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+    <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+
+<body>
+    <div id="app">
+        <v-app id="inspire">
+            <router-view></router-view>
+            <v-card height="56px">
+                <v-bottom-nav :value="true" :active.sync="e2" :color="color" absolute shift style="bottom:0">
+                    <v-btn to="/video" dark value="video">
+                        <span>Video</span>
+                        <v-icon>ondemand_video</v-icon>
+                    </v-btn>
+                    <v-btn to="/musik" dark value="musik">
+                        <span>Musik</span>
+                        <v-icon>music_note</v-icon>
+                    </v-btn>
+                    <v-btn to="/drehbuch" dark value="drehbuch">
+                        <span>Drehbuch</span>
+                        <v-icon>book</v-icon>
+                    </v-btn>
+                    <v-btn to="/bilder" dark value="bilder">
+                        <span>Bilder</span>
+                        <v-icon>image</v-icon>
+                    </v-btn>
+                </v-bottom-nav>
+            </v-card>
+        </v-app>
+    </div>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <scritp src="https://npmcdn.com/pdfjs-dist@2.0.489/build/pdf.js"></scritp>
+    <script>
+        const routes = [
+            { path: '/video', component: { template: '<h1>Video</h1>' } },
+            { path: '/musik', component: { template: '<h1>Musik</h1>' } },
+            { path: '/drehbuch', component: { template: '<iframe src="https://docs.google.com/viewerng/viewer?url=http://crew.palatina-films.tk/Inhalte/Drehbuch+Teil3.pdf&embedded=true" style="width:100%; height:100%;" frameborder="1"></iframe>' } },
+            { path: '/bilder', component: { template: '<h1>Bilder</h1>' } },
+        ]
+        const router = new VueRouter({
+            routes
+        })
+        new Vue({
+            router,
+            el: '#app',
+            data() {
+                return {
+                    e2: 'video'
+                }
+            },
+
+            computed: {
+                color() {
+                    switch (this.e2) {
+                        case 'video': return 'blue-grey'
+                        case 'musik': return 'teal'
+                        case 'drehbuch': return 'brown'
+                        case 'bilder': return 'indigo'
+                    }
+                }
+            }
+
+        })
+    </script>
+</body>
+
+</html>
