@@ -2,7 +2,7 @@
 var cacheName = 'v1'
 
 // Default files to always cache
-var cacheFiles = ['./', './js', './index.html', 'https://unpkg.com/vuetify/dist/vuetify.min.css', 'https://unpkg.com/vue-router/dist/vue-router.js', 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons']
+var cacheFiles = ['./', './manifest.json', './index.html', 'https://unpkg.com/vuetify/dist/vuetify.min.css', 'https://unpkg.com/vue-router/dist/vue-router.js', 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons']
 
 self.addEventListener('install', function(e) {
     console.log('[ServiceWorker] Installed')
