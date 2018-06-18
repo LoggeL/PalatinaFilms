@@ -37,7 +37,7 @@ window.addEventListener('beforeinstallprompt', e => {
     e.preventDefault()
     // Stash the event so it can be triggered later.
     deferredPrompt = e
-    console.log('fired')
+    alert('fired')
 })
 
 Notification.requestPermission().then(function(result) {
