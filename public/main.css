@@ -1,0 +1,179 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.main-menu-item {
+    width: 100%;
+    margin: 10px 5px;
+    text-align: left;
+    padding-left: 30px;
+}
+
+.logo {
+    height: auto;
+    width: auto;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.parallax {
+    z-index: 0;
+}
+
+@media only screen and (min-width: 1200px) {
+    .person-card {
+        width: 48% !important;
+        margin: 1%;
+    }
+}
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+}
+
+.collapsible {
+    border: 0;
+    background-color: transparent;
+}
+
+.collapsible-header,
+.side-menu {
+    background-color: #e0e0e0;
+}
+
+.collapsible-body {
+    background-color: #eeeeee;
+}
+
+#content {
+    background-color: #ffffff;
+}
+
+.flow-text {
+    color: black;
+}
+
+#footer {
+    background-color: #bdbdbd;
+}
+
+.page-copyright {
+    color: #000000;
+}
+
+.header {
+    color: black;
+    background-color: #eeeeee;
+}
+
+.arrow-container {
+    position: absolute;
+    width: 15%;
+    height: 100%;
+    z-index: 5;
+}
+
+.arrow {
+    display: none;
+    margin: auto;
+}
+
+.arrow-container:hover .arrow {
+    display: block;
+}
+
+.arrow-container:hover {
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#scroller {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#scroller:hover {
+    opacity: 0.75;
+}
+
+.picContainer {
+    transition: height 0.5s ease;
+    height: 100%;
+}
+
+.picContainer.scrolling {
+    height: 80%;
+}
+
+.scroller-image {
+    height: 100%;
+    margin: 0 2px;
+}
+
+.scroller-image:hover {
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.scroller-image.active {
+    border: 2px solid red;
+}
+
+[data-slides] {
+    background-image: url(/Bilder/logoBig.png);
+    background-color: grey;
+    /* Default image. */
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    filter: blur(2px);
+}
+
+.img-container {
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-image: none;
+}
+
+.overlay-logo {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}

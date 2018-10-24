@@ -1,0 +1,181 @@
+<h1 class="header center">Galerie</h1>
+
+<div id="closeMod" style="position:fixed;right:10%;top:5%;z-index:1500;display:none;">
+  <i class="material-icons medium white-text" style="cursor:pointer;">close</i>
+</div>
+
+<div id="preloader" class="valign-wrapper" style="height:100%;width:100%;position:fixed;z-index:1100;top:0;left:0;display:none;">
+  <div class="center" style="width:100%">
+    <div class="preloader-wrapper active big">
+      <div class="spinner-layer spinner-blue">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div>
+        <div class="gap-patch">
+          <div class="circle"></div>
+        </div>
+        <div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-red">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div>
+        <div class="gap-patch">
+          <div class="circle"></div>
+        </div>
+        <div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-yellow">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div>
+        <div class="gap-patch">
+          <div class="circle"></div>
+        </div>
+        <div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-green">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div>
+        <div class="gap-patch">
+          <div class="circle"></div>
+        </div>
+        <div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div id="modal1" class="modal" style="height: 90% !important; max-height: 90% !important; width: auto !important; overflow: hidden; background-color: rgba(0,0,0,.5);">
+  <div class="valign-wrapper" style="height:100%;">
+    <div class="white-text valign-wrapper arrow-container" style="left:0" id="arrowLeft" onclick="arrowPress(-1)">
+      <i class="material-icons arrow noselect" style="font-size:5em;">arrow_back</i>
+    </div>
+    <div class="white-text valign-wrapper arrow-container" style="right:0" id="arrowRight" onclick="arrowPress(1)">
+      <i class="material-icons arrow noselect" style="font-size:5em;">arrow_forward</i>
+    </div>
+    <div class="center" style="width:100%">
+      <img id="modalPic" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png" class="" style="max-height:100%;max-width:100%;">
+    </div>
+  </div>
+</div>
+
+<h1 class="header center">Teil 2 - Letzte Hoffnung</h1>
+<div id="galerie2"></div>
+<div class="divider section"></div>
+
+<script>
+  data = ["Alptraum.png", "Angriff%20aufs%20Rebellenlager.png", "Aufname.jpg", "Ausr%C3%BCstung.jpg", "Beleg%20Baul.png", "DSC_1012.jpg", "DSC_1021.jpg", "Diskussion.jpg", "Driacus.png", "Dunkelschatten%20Bogensch%C3%BCtze.jpg", "Dunkelschatten1.jpg", "Dunkelschatten2.jpg", "Einstudieren%20der%20Kampfszene.jpg", "Einstudieren%20des%20Texts.jpg", "Elnon.png", "Equipment.jpg", "Fee.png", "Filmplakat.jpg", "Ignatius%20und%20Triss.jpg", "Ignatius.jpg", "Kammeramann%20Kerkerszene.png", "Kammerateam.jpg", "Kampf.png", "Kerker.png", "Kost%C3%BCmwechsel.jpg", "Paladine%20Armee.png", "Paladine%20auf%20Position.jpg", "Paladine%20und%20Dunkelschatten.jpg", "Paladine1.jpg", "Paladine2.jpg", "Paladine3.jpg", "Paladine4.jpg", "Paladine5.jpg", "Paladinwache.jpg", "Paladinwache1.jpg", "Paladinwache2.jpg", "Paladinwache3.jpg", "Perspektive%20finden.jpg", "Rebellen.png", "Rebellenlager.png", "Regieanweisung.png", "Soldaten.png", "Taverne%20W%C3%BCrfelspiel.png", "Taverne.png", "Tavernentrinker.png", "Teamhund.jpg", "Training%20Toni.png", "Triss%20training.jpg", "Vamir%20Vision.png", "Zum%20Drehort.jpg"];
+  for (var i = 0; i < data.length; i = i + 3) {
+    var row = document.createElement('div');
+    row.className = "row";
+
+    for (var l = 0; l < 3; l++) {
+      if (l + i >= data.length) {
+        break;
+      }
+      var div = document.createElement("div");
+      div.className = "col s12 m4 l4 center";
+      var oImg = document.createElement("img");
+      oImg.id = "Teil2/" + data[i + l];
+      oImg.style.cursor = "zoom-in";
+      oImg.setAttribute('data-caption', decodeURIComponent(data[i + l].replace(/\.[^/.]+$/, "")));
+      oImg.setAttribute('src', '/Bilder/Thumbnail/' + data[i + l].split('.').slice(0, -1).join('.') + '.jpeg');
+      oImg.setAttribute('alt', data[i + l]);
+      oImg.className = "responsive-img";
+      oImg.onclick = function () {
+        callMod(this.id);
+      }
+      div.appendChild(oImg);
+      row.appendChild(div);
+    }
+
+    document.getElementById('galerie2').appendChild(row);
+
+  }
+
+  var currPage = "galerie2";
+  history.pushState(null, null, '?p=galerie2');
+
+  $(document).ready(function () {
+    $('.modal').modal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .9, // Opacity of modal background
+      inDuration: 300, // Transition in duration
+      outDuration: 200, // Transition out duration
+      startingTop: '5%', // Starting top style attribute
+      endingTop: '5%', // Ending top style attribute
+      ready: function (modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+      },
+      complete: function () {
+        $('#closeMod').hide();
+      } // Callback for Modal close
+    });
+  });
+
+  var errorSet = false;
+
+  function callMod(picUrl) {
+    $('#closeMod').show();
+    $('#preloader').css('display', '');
+    $('#modalPic').hide();
+    $('#modal1').modal('open');
+    document.getElementById('modalPic').setAttribute('src', "../Bilder/" + picUrl);
+    $('#modalPic').load(function () {
+      $('#preloader').css('display', 'none');
+      $('#modalPic').fadeIn();
+    });
+    if (errorSet) {
+      return;
+    }
+    errorSet = true;
+    $('#modalPic').error(function () {
+      Materialize.toast('Fehler beim Laden', 4000);
+      $('#preloader').css('display', 'none');
+      $('.modal').modal('close');
+    })
+  }
+
+  function arrowPress(dir) {
+    var modal = $('#modalPic')
+    var url = modal.attr('src')
+    for (var i = 0; i < data.length; i++) {
+      if (url.endsWith(data[i])) {
+        if (!data[i + dir]) {
+          i = (dir == -1 ? data.length - 1 : 0)
+        } else {
+          i = i + dir
+        }
+        modal.fadeOut("fast", function () {
+          $('#preloader').css('display', '');
+          modal.one('load', function () {
+            $('#preloader').css('display', 'none');
+            modal.fadeIn('fast')
+          }).attr('src', "../Bilder/Teil2/" + data[i]);
+        })
+        break
+      }
+    }
+  }
+
+  $('#modalPic').click(function () {
+    $('.modal').modal('close');
+  });
+  $('#closeMod').click(function () {
+    $('.modal').modal('close');
+  });
+</script>

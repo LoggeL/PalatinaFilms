@@ -1,0 +1,56 @@
+<div class="container">
+	<p class="flow-text">Herzlich Wilkommen auf der offiziellen Palatina Films Homepage.</p>
+</div>
+<div class="img-container">
+	<img class="overlay-logo" src="/Bilder/logoBig.png" alt="Logo groß" id="mainLogo" class="responsive-img">
+	<div data-slides='[
+			"Bilder/Thumbnail/Anlegen der Rüstung.jpeg",
+			"Bilder/Thumbnail/Auszeit.jpeg",
+			"Bilder/Thumbnail/Bachlauf.jpeg",
+			"Bilder/Thumbnail/Cheern.jpeg",
+			"Bilder/Thumbnail/Dunkelschatten1.jpeg",
+			"Bilder/Thumbnail/Kameraschergen.jpeg",
+			"Bilder/Thumbnail/Angriff aufs Rebellenlager.jpeg",
+			"Bilder/Thumbnail/Paladine Armee.jpeg",
+			"Bilder/Thumbnail/Dr Dimetricus und Harras.jpeg",
+			"Bilder/Thumbnail/Kameraschergen.jpeg",
+			"Bilder/Thumbnail/Driacus.jpeg",
+			"Bilder/Thumbnail/Kyra im Gras.jpeg",
+			"Bilder/Thumbnail/Paladinwache1.jpeg",
+			"Bilder/Thumbnail/Scherge2.jpeg"
+		]'></div>
+</div>
+<div class="container">
+	<p class="flow-text">Hier findet ihr einen groben Überblick von dem was wir machen und wer wir sind.
+		<br> Viel Spaß beim durchstöbern der Homepage.</p>
+	<blockquote>
+		Palatina Films.
+		<br>We bring you fantasy.
+	</blockquote>
+</div>
+<script>
+	var currPage = "main";
+	history.pushState(null, null, '?p=main');
+
+	/*! slides | https://gist.github.com/mhulse/66bcbb7099bb4beae530 */
+	(function ($) {
+		if (navigator && navigator.connection && navigator.connection.downlink && navigator.connection.downlink < 1) return Materialize.toast("Langsames Internet -> Slideshow deaktiviert")
+
+		'use strict';
+
+		var $slides = $('[data-slides]');
+		var images = $slides.data('slides')
+		var count = images.length;
+		var slideshow = function () {
+			$slides.fadeOut(500, function () {
+				$slides.css('background-image', 'url("' + images[Math.floor(Math.random() * count)] + '")')
+					.fadeIn(500, function () {
+						setTimeout(slideshow, 7500);
+					});
+			})
+		};
+
+		slideshow();
+
+	}(jQuery));
+</script>

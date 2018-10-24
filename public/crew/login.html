@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>title</title>
+</head>
+
+<body>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDw1Lkxl_Uy1e9Nda6_NUKhucX0JAOt4bc",
+            authDomain: "palatina-films-1536785886774.firebaseapp.com",
+            databaseURL: "https://palatina-films-1536785886774.firebaseio.com",
+            projectId: "palatina-films-1536785886774",
+            storageBucket: "palatina-films-1536785886774.appspot.com",
+            messagingSenderId: "1089672939615"
+        };
+        firebase.initializeApp(config);
+
+        function emailAnmelden(email, password) {
+            firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
+                // Handle Errors here.
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                console.log(error)
+                // ...
+            });
+        }
+
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                console.log(user)
+            } else {
+                console.log("authStateChane - no user")
+            }
+        });
+
+        var provider = new firebase.auth.GoogleAuthProvider();
+        firebase.auth().languageCode = 'de';
+        firebase.auth().signInWithPopup(provider).then(function (result) {
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            var token = result.credential.accessToken;
+            // The signed-in user info.
+            var user = result.user;
+            // ...
+
+            console.log(user)
+        }).catch(function (error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // The email of the user's account used.
+            var email = error.email;
+            // The firebase.auth.AuthCredential type that was used.
+            var credential = error.credential;
+            // ...
+
+            console.log(error)
+        });
+
+    </script>
+</body>
+
+</html>

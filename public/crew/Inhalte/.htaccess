@@ -1,0 +1,6 @@
+Options -Indexes
+ErrorDocument 400 "Ooops - Bad request!
+ErrorDocument 401 "Speak friend and enter
+ErrorDocument 403 "Strictly fabidden..
+ErrorDocument 404 "Missing in action..
+ErrorDocument 500 "Server gone wild..
