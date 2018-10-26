@@ -193,24 +193,21 @@
 				</script> Palatina Films
 			</div>
 			<a class="btn btn-flat black-text right" href="mailto:palatina-films@gmail.com" data-target="">Kontakt</a>
-			<a class="btn btn-flat black-text right" href="#" onclick="loadPage('impressum.html');">Impressum</a>
+			<a class="btn btn-flat black-text right" href="#" onclick="loadPage('impressum.html');">Impressum & Datenschutz</a>
 		</div>
 	</footer>
 
 
 	<!-- JS -->
 
-	<!-- Global Site Tag (gtag.js) - Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-90554019-2"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
-
-		function gtag() {
-			dataLayer.push(arguments)
-		};
+		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
+		gtag('config', 'UA-90554019-2', { 'anonymize_ip': true });
 
-		gtag('config', 'UA-90554019-2');
 	</script>
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -244,6 +241,7 @@
 			if (currPage == "none") {
 				delay = 0;
 			}
+			gtag('event', 'changePage', { 'anonymize_ip': true, 'event_label': page, 'event_category': 'navigation' });
 			$("#content").fadeOut(delay, function () {
 				$("#content").load(page, function (result) {
 					if (localStorage.darkTheme == "true") {
@@ -267,6 +265,7 @@
 		}
 
 		function togDT() {
+			gtag('event', 'themeToggle', { 'anonymize_ip': true, 'event_category': 'design', 'event_label': localStorage.darkTheme == "true" ? 'light' : 'dark' });
 			if (localStorage.darkTheme == "true") {
 				localStorage.setItem("darkTheme", false);
 				window.location.reload(1);
