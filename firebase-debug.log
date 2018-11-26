@@ -1,0 +1,17 @@
+[debug] [2018-10-30T11:52:26.793Z] ----------------------------------------------------------------------
+[debug] [2018-10-30T11:52:26.806Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hyper\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy -m Team
+[debug] [2018-10-30T11:52:26.807Z] CLI Version:   6.0.0
+[debug] [2018-10-30T11:52:26.807Z] Platform:      win32
+[debug] [2018-10-30T11:52:26.807Z] Node Version:  v10.11.0
+[debug] [2018-10-30T11:52:26.819Z] Time:          Tue Oct 30 2018 12:52:26 GMT+0100 (Central European Standard Time)
+[debug] [2018-10-30T11:52:26.819Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-10-30T11:52:26.852Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-10-30T11:52:26.854Z] > authorizing via signed-in user
+[debug] [2018-10-30T11:52:26.854Z] [iam] checking project palatina-films-1536785886774 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2018-10-30T11:52:26.858Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/palatina-films-1536785886774:testIamPermissions  
+
+[debug] [2018-10-30T11:52:27.858Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-30T11:52:27.861Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/palatina-films-1536785886774  
+ 
+[debug] [2018-10-30T11:52:28.162Z] <<< HTTP RESPONSE 200

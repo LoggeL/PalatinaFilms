@@ -23,9 +23,10 @@
             background-color: white;
             z-index: 1;
             cursor: pointer;
+            overflow-y: auto;
         }
 
-        .fokus-person.aktiv {
+        .inhalt-wrapper.aktiv .fokus-person {
             opacity: 1;
             top: 0;
         }
@@ -35,7 +36,6 @@
             position: relative;
             background-color: rgba(133, 133, 133, 0.8)
         }
-
 
         .fokus-bild-wrapper:before {
             content: '';
@@ -96,7 +96,7 @@
             width: 100%;
             height: 1px;
             background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1), rgba(255, 255, 255, 0));
-            margin: 5%;
+            margin: 5% 0;
             position: relative;
             float: left;
         }
@@ -104,75 +104,96 @@
 </head>
 
 <body>
-    <div class="fokus-person">
-        <div class="fokus-bild-wrapper">
-            <img class="fokus-bild-back" src='/svg/lade.svg'>
-            <img class="fokus-bild-profil" src='/svg/lade.svg'>
-            <span class="fokus-name">Mr. Kitty</span>
-        </div>
-        <div class="fokus-text-wrapper">
-            <span class="fokus-text">
-                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet
-                quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-            </span>
-        </div>
-    </div>
-    <h1> Team </h1>
-    <h2> Organisation </h2>
     <div class="inhalt-wrapper">
-        <div class="team-wrapper" name="name1">
-            <img class="team-bild" src="https://placekitten.com/500/501">
-            <span class="team-text">
-                Text Kurz
-            </span>
+        <div class="fokus-person">
+            <div class="fokus-bild-wrapper">
+                <img class="fokus-bild-back" src='/svg/lade.svg'>
+                <img class="fokus-bild-profil" src='/svg/lade.svg'>
+                <span class="fokus-name">Mr. Kitty</span>
+            </div>
+            <div class="fokus-text-wrapper">
+                <span class="fokus-text">
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                    Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit
+                    amet
+                    quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+                </span>
+            </div>
         </div>
-        <div class="team-wrapper" name="name2">
-            <img class="team-bild" src="https://placekitten.com/500/502">
-            <span class="team-text">
-                Text Kurz
-            </span>
-        </div>
-        <div class="team-wrapper" name="name3">
-            <img class="team-bild" src="https://placekitten.com/500/503">
-            <span class="team-text">
-                Text Kurz
-            </span>
-        </div>
-        <div class="team-wrapper" name="name4">
-            <img class="team-bild" src="https://placekitten.com/500/504">
-            <span class="team-text">
-                Text Kurz
-            </span>
-        </div>
+        <h1> Team </h1>
+        <h2> Organisation </h2>
+        <div class="uebersicht-wrapper">
+            <div class="team-wrapper" name="name1">
+                <img class="team-bild" src="https://placekitten.com/500/501">
+                <span class="team-text">
+                    Text Kurz
+                </span>
+            </div>
+            <div class="team-wrapper" name="name2">
+                <img class="team-bild" src="https://placekitten.com/500/502">
+                <span class="team-text">
+                    Text Kurz
+                </span>
+            </div>
+            <div class="team-wrapper" name="name3">
+                <img class="team-bild" src="https://placekitten.com/500/503">
+                <span class="team-text">
+                    Text Kurz
+                </span>
+            </div>
+            <div class="team-wrapper" name="name4">
+                <img class="team-bild" src="https://placekitten.com/500/504">
+                <span class="team-text">
+                    Text Kurz
+                </span>
+            </div>
 
-        <div class="abgrenzung"></div>
-        <h2>Schauspieler</h2>
+            <div class="abgrenzung"></div>
+            <h2>Schauspieler</h2>
 
-        <div class="team-wrapper" name="name5">
-            <img class="team-bild" src="https://placekitten.com/500/505">
-            <span class="team-text">
-                Text Kurz
-            </span>
-        </div>
-        <div class="team-wrapper" name="name6">
-            <img class="team-bild" src="https://placekitten.com/500/506">
-            <span class="team-text">
-                Text Kurz
-            </span>
-        </div>
-        <div class="team-wrapper" name="name7">
-            <img class="team-bild" src="https://placekitten.com/500/507">
-            <span class="team-text">
-                Text Kurz
-            </span>
+            <div class="team-wrapper" name="name5">
+                <img class="team-bild" src="https://placekitten.com/500/505">
+                <span class="team-text">
+                    Text Kurz
+                </span>
+            </div>
+            <div class="team-wrapper" name="name6">
+                <img class="team-bild" src="https://placekitten.com/500/506">
+                <span class="team-text">
+                    Text Kurz
+                </span>
+            </div>
+            <div class="team-wrapper" name="name7">
+                <img class="team-bild" src="https://placekitten.com/500/507">
+                <span class="team-text">
+                    Text Kurz
+                </span>
+            </div>
+            <div class="team-wrapper" name="name8">
+                <img class="team-bild" src="https://placekitten.com/500/508">
+                <span class="team-text">
+                    Text Kurz
+                </span>
+            </div>
+            <div class="team-wrapper" name="name8">
+                <img class="team-bild" src="https://placekitten.com/500/508">
+                <span class="team-text">
+                    Text Kurz
+                </span>
+            </div>
+            <div class="team-wrapper" name="name9">
+                <img class="team-bild" src="https://placekitten.com/500/509">
+                <span class="team-text">
+                    Text Kurz
+                </span>
+            </div>
         </div>
     </div>
 
     <script>
         var fokusInhalte = {
             "name1": {
-                text: "text1",
+                text: "text1 ".repeat(2000),
                 name: "name1",
                 bild: "https://placekitten.com/1000/500"
             },
@@ -206,6 +227,21 @@
                 name: "name7",
                 bild: "https://placekitten.com/1000/506"
             },
+            "name8": {
+                text: "text8",
+                name: "name8",
+                bild: "https://placekitten.com/1000/507"
+            },
+            "name9": {
+                text: "text9",
+                name: "name9",
+                bild: "https://placekitten.com/1000/508"
+            },
+            "name10": {
+                text: "text10",
+                name: "name10",
+                bild: "https://placekitten.com/1000/509"
+            },
         }
 
         var mitglieder = document.querySelectorAll('.team-wrapper')
@@ -227,7 +263,8 @@
                 fokusName.textContent = inhalt.name
                 fokusText.textContent = inhalt.text
                 fokusBild.src = '/svg/lade.svg'
-                document.querySelector('.fokus-person').classList.toggle('aktiv')
+                document.querySelector('.inhalt-wrapper').classList.toggle('aktiv')
+                document.body.style["overflow-y"] = "hidden"
                 setTimeout(function () {
                     fokusBild.src = inhalt.bild
                     fokusProfil.src = target.firstElementChild.src
@@ -241,7 +278,8 @@
         }
 
         document.querySelector('.fokus-person').addEventListener('click', function () {
-            document.querySelector('.fokus-person').classList.toggle('aktiv')
+            document.querySelector('.inhalt-wrapper').classList.toggle('aktiv')
+            document.body.style["overflow-y"] = "auto"
         })
     </script>
 </body>
