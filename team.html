@@ -3,7 +3,7 @@
   <div class="card-panel z-depth-3 col xl6 l12 m12 s12 person-card grey section">
     <div class="row valign-wrapper" style="margin-top:20px;">
       <div class="col s5">
-        <img src="/Bilder/sebbi.png" alt="Seb" class="circle responsive-img white">
+        <img src="./Bilder/sebbi.png" alt="Seb" class="circle responsive-img white">
       </div>
       <div class="col s7 card grey lighten-3">
         <h2 class="card-title center">Sebastian</h2>
@@ -30,7 +30,7 @@
   <div class="card-panel z-depth-3 col xl6 l12 m12 s12 person-card grey">
     <div class="row valign-wrapper" style="margin-top:20px;">
       <div class="col s5">
-        <img src="/Bilder/anton.png" alt="Anton" class="circle responsive-img white">
+        <img src="./Bilder/anton.png" alt="Anton" class="circle responsive-img white">
       </div>
       <div class="col s7 card grey lighten-3">
         <h2 class="card-title center">Anton</h2>
@@ -57,7 +57,7 @@
   <div class="card-panel z-depth-3 col xl6 l12 m12 s12 person-card grey">
     <div class="row valign-wrapper" style="margin-top:20px;">
       <div class="col s5">
-        <img src="/Bilder/julian.png" alt="Julian" class="circle responsive-img white">
+        <img src="./Bilder/julian.png" alt="Julian" class="circle responsive-img white">
       </div>
       <div class="col s7 card grey lighten-3">
         <h2 class="card-title center">Julian</h2>
@@ -84,7 +84,7 @@
   <div class="card-panel z-depth-3 col xl6 l12 m12 s12 person-card grey">
     <div class="row valign-wrapper" style="margin-top:20px;">
       <div class="col s5">
-        <img src="/Bilder/logge.png" alt="Logge" class="circle responsive-img white">
+        <img src="./Bilder/logge.png" alt="Logge" class="circle responsive-img white">
       </div>
       <div class="col s7 card grey lighten-3">
         <h2 class="card-title center">Logge</h2>
@@ -111,7 +111,7 @@
   <div class="card-panel z-depth-3 col xl6 l12 m12 s12 person-card grey">
     <div class="row valign-wrapper" style="margin-top:20px;">
       <div class="col s5">
-        <img src="/Bilder/ferd.png" alt="Chris" class="circle responsive-img white" id="ferd">
+        <img src="./Bilder/ferd.png" alt="Chris" class="circle responsive-img white" id="ferd">
       </div>
       <div class="col s7 card grey lighten-3">
         <h2 class="card-title center">Chris</h2>
@@ -135,7 +135,7 @@
   <div class="card-panel z-depth-3 col xl6 l12 m12 s12 person-card grey">
     <div class="row valign-wrapper" style="margin-top:20px;">
       <div class="col s5">
-        <img src="/Bilder/lenn.png" alt="Lenn" class="circle responsive-img white">
+        <img src="./Bilder/lenn.png" alt="Lenn" class="circle responsive-img white">
       </div>
       <div class="col s7 card grey lighten-3">
         <h2 class="card-title center">Leonhard</h2>
@@ -159,7 +159,7 @@
   <div class="card-panel z-depth-3 col xl6 l12 m12 s12 person-card grey">
     <div class="row valign-wrapper" style="margin-top:20px;">
       <div class="col s5">
-        <img src="/Bilder/passi.png" alt="Pascal" class="circle responsive-img white">
+        <img src="./Bilder/passi.png" alt="Pascal" class="circle responsive-img white">
       </div>
       <div class="col s7 card grey lighten-3">
         <h2 class="card-title center">Pascal</h2>
@@ -182,10 +182,10 @@
   var currPage = "team";
   history.pushState(null, null, '?p=team');
 
-  $.get( "http://ip-api.com/json", function( data ) {
-  if (data && data.city == "Kaiserslautern" && data.isp == "Vodafone Kabel Deutschland") {
-    $('#ferd').attr("src","http://i.imgur.com/tPER2Qy.png");
-    $('#ferd').attr("class","responsive-img");
-  }
+  $.get("http://ip-api.com/json", function (data) {
+    if (data && data.city == "Kaiserslautern" && data.isp == "Vodafone Kabel Deutschland") {
+      $('#ferd').attr("src", "http://i.imgur.com/tPER2Qy.png");
+      $('#ferd').attr("class", "responsive-img");
+    }
   });
 </script>

@@ -103,7 +103,7 @@
 
         var oImg = document.createElement("img");
         oImg.setAttribute('data-caption', decodeURIComponent(data[i + l].replace(/\.[^/.]+$/, "")));
-        oImg.setAttribute('src', '/Bilder/Thumbnail/' + data[i + l].split('.').slice(0, -1).join('.') + '.jpeg')
+        oImg.setAttribute('src', './Bilder/Thumbnail/' + data[i + l].split('.').slice(0, -1).join('.') + '.jpeg')
         oImg.setAttribute('alt', data[i + l]);
         oImg.id = "Teil1/" + data[i + l];
         oImg.className = "responsive-img";
@@ -113,7 +113,7 @@
         }
 
         var sImg = document.createElement('img')
-        sImg.setAttribute('src', '/Bilder/Thumbnail/' + data[i + l].split('.').slice(0, -1).join('.') + '.jpeg')
+        sImg.setAttribute('src', './Bilder/Thumbnail/' + data[i + l].split('.').slice(0, -1).join('.') + '.jpeg')
         sImg.setAttribute('data-src', "../Bilder/Teil1/" + data[i + l])
         sImg.id = "scroller_" + data[i + l]
         sImg.className = "scroller-image";
