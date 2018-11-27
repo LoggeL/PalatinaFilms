@@ -1,2 +1,0 @@
-# PalatinaFilms
-Offizielle PalatinaFilms Webseite
