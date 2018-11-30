@@ -181,11 +181,4 @@
 <script>
   var currPage = "team";
   history.pushState(null, null, '?p=team');
-
-  $.get("http://ip-api.com/json", function (data) {
-    if (data && data.city == "Kaiserslautern" && data.isp == "Vodafone Kabel Deutschland") {
-      $('#ferd').attr("src", "http://i.imgur.com/tPER2Qy.png");
-      $('#ferd').attr("class", "responsive-img");
-    }
-  });
 </script>
