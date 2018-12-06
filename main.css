@@ -177,3 +177,12 @@ main {
     left: 0;
     z-index: 1;
 }
+
+.team-modal {
+    max-height: 90%;
+    min-width: 90%;
+}
+
+.team-modal .col .flow-text {
+    margin-top: 0;
+}
