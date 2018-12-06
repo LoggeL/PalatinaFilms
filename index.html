@@ -1,304 +1,492 @@
 <!DOCTYPE html>
 <html lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Palatina Films</title>
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1" />
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-	<meta name="theme-color" content="#ffffff">
-	<title>Palatina Films</title>
+    <meta property="og:title" content="Palatina Films" />
+    <meta
+      property="og:image"
+      content="http://palatina-films.tk/Bilder/logo.png"
+    />
+    <meta
+      property="og:site_name"
+      content="Offizielle Palatina Films Homepage"
+    />
+    <meta property="og:description" content="We bring you fantasy" />
 
-	<meta property="og:title" content="Palatina Films" />
-	<meta property="og:image" content="http://palatina-films.tk/Bilder/logo.png" />
-	<meta property="og:site_name" content="Offizielle Palatina Films Homepage" />
-	<meta property="og:description" content="We bring you fantasy" />
+    <link rel="icon" href="./favicon-32x32.png" sizes="32x32" />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="./apple-icon-152x152.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./favicon-96x96.png"
+    />
 
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css"
+    />
+    <link href="./main.css" rel="stylesheet" />
+  </head>
 
-	<link rel="icon" href="./favicon-32x32.png" sizes="32x32">
-	<link rel="apple-touch-icon" sizes="152x152" href="./apple-icon-152x152.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png">
+  <body>
+    <main>
+      <div class="fixed-action-btn">
+        <a
+          href="#"
+          data-activates="mobile-nav"
+          class="button-collapse btn-floating btn-large black hide-on-large-only z-depth-2"
+        >
+          <i class="large material-icons">menu</i>
+        </a>
+      </div>
 
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
-	<link href="./main.css" rel="stylesheet">
+      <!-- Side Nav -->
+      <ul class="side-nav side-menu" id="mobile-nav">
+        <li class="" style="text-align:center;height:100px;">
+          <a
+            href="/#"
+            target="_blank"
+            style="background-color:transparent !important;"
+          >
+            <img
+              onmouseover="this.src='./Bilder/locked.png';"
+              onmouseout="this.src='./Bilder/logo.png';"
+              src="./Bilder/logo.png"
+              alt="Logo"
+              class="circle logo tooltipped"
+              data-position="bottom"
+              data-delay="50"
+              data-tooltip="Für Login klicken"
+            />
+          </a>
+        </li>
+        <li><div class="divider black"></div></li>
+        <li>
+          <a href="#" class="main-menu-item" onclick="loadPage('main.html');"
+            >Startseite</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="main-menu-item"
+            onclick="loadPage('ueberuns.html');"
+            >Über uns</a
+          >
+        </li>
+        <li>
+          <ul
+            class="collapsible"
+            class="main-menu-item"
+            data-collapsible="accordion"
+            style="box-shadow:none;"
+          >
+            <li>
+              <a
+                class="collapsible-header main-menu-item"
+                style="padding-left:32px;"
+                >Projekte
+                <i class="main-menu-item material-icons right"
+                  >arrow_drop_down</i
+                >
+              </a>
+              <div
+                class="collapsible-body side-menu"
+                style="padding:0;padding-left:35px;"
+              >
+                <ul>
+                  <li>
+                    <a
+                      href="#"
+                      class="truncate main-menu-item"
+                      onclick="loadPage('selantis.html');"
+                      >Die Chroniken von Selantis</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="main-menu-item"
+                      onclick="loadPage('zproj.html');"
+                      >Zukünftige Projekte</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="main-menu-item" onclick="loadPage('team.html');"
+            >Team</a
+          >
+        </li>
+        <li>
+          <ul
+            class="collapsible"
+            data-collapsible="accordion"
+            style="box-shadow:none;"
+          >
+            <li>
+              <a
+                class="collapsible-header main-menu-item"
+                style="padding-left:32px;"
+                >Galerie
+                <i class="main-menu-item material-icons right"
+                  >arrow_drop_down</i
+                >
+              </a>
+              <div
+                class="collapsible-body"
+                style="padding:0;padding-left:35px;"
+              >
+                <ul>
+                  <li>
+                    <a
+                      href="#"
+                      class="main-menu-item"
+                      onclick="loadPage('galerie1.html');"
+                      >Teil 1</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="main-menu-item"
+                      onclick="loadPage('galerie2.html');"
+                      >Teil 2</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="main-menu-item"
+                      onclick="loadPage('galerie3.html');"
+                      >Teil 3</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="main-menu-item" onclick="togDT();"
+            >Dunkles Theme</a
+          >
+        </li>
+      </ul>
 
-</head>
+      <!-- Main Nav -->
+      <div class="row" style="height:100%;margin-bottom:0;">
+        <div
+          class="col l3 side-menu center hide-on-med-and-down card z-depth-5"
+          style="height:100%;margin:0;position:fixed;z-index:2;"
+        >
+          <ul id="main-nav" class="" style="width:100%;">
+            <li class="" style="margin-bottom:10px;">
+              <a href="http://crew.palatina-films.tk/#Login" target="_blank">
+                <img
+                  onmouseover="this.src='/Bilder/locked.png';"
+                  onmouseout="this.src='/Bilder/logo.png';"
+                  src="./Bilder/logo.png"
+                  alt="Logo"
+                  class="circle logo tooltipped"
+                  data-position="bottom"
+                  data-delay="50"
+                  data-tooltip="Für Login klicken"
+                />
+              </a>
+            </li>
+            <li><div class="divider black"></div></li>
+            <li>
+              <a
+                href="#"
+                class="btn btn-flat main-menu-item"
+                onclick="loadPage('main.html');"
+                >Startseite</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="btn btn-flat main-menu-item"
+                onclick="loadPage('ueberuns.html')"
+                ;
+                >Über uns</a
+              >
+            </li>
+            <li>
+              <ul
+                class="collapsible"
+                data-collapsible="accordion"
+                style="box-shadow:none;"
+              >
+                <li>
+                  <a
+                    class="btn btn-flat main-menu-item collapsible-header"
+                    style="border:0;"
+                    >Projekte
+                    <i class="material-icons right">arrow_drop_down</i>
+                  </a>
+                  <div class="collapsible-body" style="padding:0;">
+                    <ul>
+                      <li>
+                        <a
+                          href="#"
+                          class="btn btn-flat main-menu-item truncate"
+                          onclick="loadPage('selantis.html');"
+                          >Die Chroniken von Selantis</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="btn btn-flat main-menu-item truncate"
+                          onclick="loadPage('zproj.html');"
+                          >Zukünftige Projekte</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="btn btn-flat main-menu-item"
+                onclick="loadPage('team.html');"
+                >Team</a
+              >
+            </li>
+            <li>
+              <ul
+                class="collapsible"
+                data-collapsible="accordion"
+                style="box-shadow:none;"
+              >
+                <li>
+                  <a
+                    class="btn btn-flat main-menu-item collapsible-header"
+                    style="border:0;"
+                    >Galerie <i class="material-icons right">arrow_drop_down</i>
+                  </a>
+                  <div class="collapsible-body" style="padding:0;">
+                    <ul>
+                      <li>
+                        <a
+                          href="#"
+                          class="btn btn-flat main-menu-item truncate"
+                          onclick="loadPage('galerie1.html');"
+                          >Teil 1</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="btn btn-flat main-menu-item truncate"
+                          onclick="loadPage('galerie2.html');"
+                          >Teil 2</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="btn btn-flat main-menu-item truncate"
+                          onclick="loadPage('galerie3.html');"
+                          >Teil 3</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="btn btn-flat main-menu-item" onclick="togDT();"
+                >Dunkles Theme</a
+              >
+            </li>
+          </ul>
+        </div>
 
-<body>
-	<main>
-		<div class="fixed-action-btn">
-			<a href="#" data-activates="mobile-nav" class="button-collapse btn-floating btn-large black hide-on-large-only z-depth-2">
-				<i class="large material-icons">menu</i>
-			</a>
-		</div>
+        <!-- Content -->
+        <div id="content" class="col s12 m12 l9 offset-l3" style="height:100%;">
+          <div class="container" style="height:100;">
+            <h1 class="header">
+              Wenn Sie das lesen können, haben Sie keinen JavaScript aktiviert
+              oder es ist ein Fehler unterlaufen!
+            </h1>
+          </div>
+        </div>
+      </div>
+    </main>
 
-		<!--Side Nav-->
-		<ul class="side-nav side-menu" id="mobile-nav">
-			<li class="" style="text-align:center;height:100px;">
-				<a href="http://crew.palatina-films.tk/#Login" target="_blank" style="background-color:transparent !important;">
-					<img onmouseover="this.src='/Bilder/locked.png';" onmouseout="this.src='/Bilder/logo.png';" src="./Bilder/logo.png"
-					 alt="Logo" class="circle logo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Für Login klicken">
-				</a>
-			</li>
-			<li>
-				<div class="divider black"></div>
-			</li>
-			<li>
-				<a href="#" class="main-menu-item" onclick="loadPage('main.html');">Startseite</a>
-			</li>
-			<li>
-				<a href="#" class="main-menu-item" onclick="loadPage('ueberuns.html');">Über uns</a>
-			</li>
-			<li>
-				<ul class="collapsible" class="main-menu-item" data-collapsible="accordion" style="box-shadow:none;">
-					<li>
-						<a class="collapsible-header main-menu-item" style="padding-left:32px;">Projekte
-							<i class="main-menu-item material-icons right">arrow_drop_down</i>
-						</a>
-						<div class="collapsible-body side-menu" style="padding:0;padding-left:35px;">
-							<ul>
-								<li>
-									<a href="#" class="truncate main-menu-item" onclick="loadPage('selantis.html');">Die Chroniken von Selantis</a>
-								</li>
-								<li>
-									<a href="#" class="main-menu-item" onclick="loadPage('zproj.html');">Zukünftige Projekte</a>
-								</li>
-							</ul>
-						</div>
-					</li>
-				</ul>
-			</li>
-			<li>
-				<a href="#" class="main-menu-item" onclick="loadPage('team.html');">Team</a>
-			</li>
-			<li>
-				<ul class="collapsible" data-collapsible="accordion" style="box-shadow:none;">
-					<li>
-						<a class="collapsible-header main-menu-item" style="padding-left:32px;">Galerie
-							<i class="main-menu-item material-icons right">arrow_drop_down</i>
-						</a>
-						<div class="collapsible-body" style="padding:0;padding-left:35px;">
-							<ul>
-								<li>
-									<a href="#" class="main-menu-item" onclick="loadPage('galerie1.html');">Teil 1</a>
-								</li>
-								<li>
-									<a href="#" class="main-menu-item" onclick="loadPage('galerie2.html');">Teil 2</a>
-								</li>
-								<li>
-									<a href="#" class="main-menu-item" onclick="loadPage('galerie3.html');">Teil 3</a>
-								</li>
-							</ul>
-						</div>
-					</li>
-				</ul>
-			</li>
-			<li>
-				<a href="#" class="main-menu-item" onclick="togDT();">Dunkles Theme</a>
-			</li>
-		</ul>
+    <footer
+      id="footer"
+      class="page-footer card z-depth-5"
+      style="padding:0; margin:0;"
+    >
+      <div class="footer-copyright">
+        <div class="container center hide-on-small-only">
+          &copy;
+          <script>
+            document.write(new Date().getFullYear())
+          </script>
+          Palatina Films
+        </div>
+        <a
+          class="btn btn-flat black-text right"
+          href="mailto:palatina-films@gmail.com"
+          data-target=""
+          >Kontakt</a
+        >
+        <a
+          class="btn btn-flat black-text right"
+          href="#"
+          onclick="loadPage('impressum.html');"
+          >Impressum & Datenschutz</a
+        >
+      </div>
+    </footer>
 
-		<!--Main Nav-->
-		<div class="row" style="height:100%;margin-bottom:0;">
-			<div class="col l3 side-menu center hide-on-med-and-down card z-depth-5" style="height:100%;margin:0;position:fixed;z-index:2;">
-				<ul id="main-nav" class="" style="width:100%;">
-					<li class="" style="margin-bottom:10px;">
-						<a href="http://crew.palatina-films.tk/#Login" target="_blank">
-							<img onmouseover="this.src='/Bilder/locked.png';" onmouseout="this.src='/Bilder/logo.png';" src="./Bilder/logo.png"
-							 alt="Logo" class="circle logo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Für Login klicken">
-						</a>
-					</li>
-					<li>
-						<div class="divider black"></div>
-					</li>
-					<li>
-						<a href="#" class="btn btn-flat main-menu-item" onclick="loadPage('main.html');">Startseite</a>
-					</li>
-					<li>
-						<a href="#" class="btn btn-flat main-menu-item" onclick="loadPage('ueberuns.html')" ;>Über uns</a>
-					</li>
-					<li>
-						<ul class="collapsible" data-collapsible="accordion" style="box-shadow:none;">
-							<li>
-								<a class="btn btn-flat main-menu-item collapsible-header" style="border:0;">Projekte
-									<i class="material-icons right">arrow_drop_down</i>
-								</a>
-								<div class="collapsible-body" style="padding:0;">
-									<ul>
-										<li>
-											<a href="#" class="btn btn-flat main-menu-item truncate" onclick="loadPage('selantis.html');">Die Chroniken
-												von Selantis</a>
-										</li>
-										<li>
-											<a href="#" class="btn btn-flat main-menu-item truncate" onclick="loadPage('zproj.html');">Zukünftige
-												Projekte</a>
-										</li>
-									</ul>
-								</div>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" class="btn btn-flat main-menu-item" onclick="loadPage('team.html');">Team</a>
-					</li>
-					<li>
-						<ul class="collapsible" data-collapsible="accordion" style="box-shadow:none;">
-							<li>
-								<a class="btn btn-flat main-menu-item collapsible-header" style="border:0;">Galerie
-									<i class="material-icons right">arrow_drop_down</i>
-								</a>
-								<div class="collapsible-body" style="padding:0;">
-									<ul>
-										<li>
-											<a href="#" class="btn btn-flat main-menu-item truncate" onclick="loadPage('galerie1.html');">Teil 1</a>
-										</li>
-										<li>
-											<a href="#" class="btn btn-flat main-menu-item truncate" onclick="loadPage('galerie2.html');">Teil 2</a>
-										</li>
-										<li>
-											<a href="#" class="btn btn-flat main-menu-item truncate" onclick="loadPage('galerie3.html');">Teil 3</a>
-										</li>
-									</ul>
-								</div>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" class="btn btn-flat main-menu-item" onclick="togDT();">Dunkles Theme</a>
-					</li>
-				</ul>
-			</div>
+    <!-- JS -->
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-90554019-2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+      gtag('config', 'UA-90554019-2', { anonymize_ip: true })
+    </script>
 
-			<!--Content -->
-			<div id="content" class="col s12 m12 l9 offset-l3" style="height:100%;">
-				<div class="container" style="height:100;">
-					<h1 class="header">Wenn Sie das lesen können, haben Sie keinen JavaScript aktiviert oder es ist ein Fehler
-						unterlaufen!</h1>
-				</div>
-			</div>
-		</div>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-2.1.1.min.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
 
-	</main>
+    <!-- Scripts -->
+    <script>
+      //OnLoad
+      $(document).ready(function() {
+        $('.button-collapse').sideNav({
+          menuWidth: 250,
+          closeOnClick: true,
+          draggable: true
+        })
+        var page = document.location.search.substr(3)
+        currPage = 'none'
+        if (page) {
+          loadPage(page + '.html', document.location.hash)
+          currPage = page
+        } else {
+          loadPage('main.html')
+          currPage = 'main'
+        }
+      })
 
+      function loadPage(page, hash) {
+        var delay = 500
+        if (page == currPage) {
+          return
+        }
+        if (currPage == 'none') {
+          delay = 0
+        }
+        gtag('event', 'changePage', {
+          anonymize_ip: true,
+          event_label: page,
+          event_category: 'navigation'
+        })
+        $('#content').fadeOut(delay, function() {
+          $('#content').load(page, function(result) {
+            if (localStorage.darkTheme == 'true') {
+              darkTheme()
+            }
+            $('#content').fadeIn(500)
+            $('.parallax').parallax()
+            if (result == '<h1>404 - Nicht gefunden!</h1>') {
+              loadPage('main.html')
+              currPage = 'main'
+              Materialize.toast('Seite nicht gefunden!', 4000)
+            }
+            if (hash) {
+              $('html,body').animate(
+                {
+                  scrollTop: $(hash).offset().top
+                },
+                'slow'
+              )
+            }
+          })
+        })
+      }
 
+      function togDT() {
+        gtag('event', 'themeToggle', {
+          anonymize_ip: true,
+          event_category: 'design',
+          event_label: localStorage.darkTheme == 'true' ? 'light' : 'dark'
+        })
+        if (localStorage.darkTheme == 'true') {
+          localStorage.setItem('darkTheme', false)
+          window.location.reload(1)
+        } else {
+          localStorage.setItem('darkTheme', true)
+          darkTheme()
+        }
+      }
 
-	<footer id="footer" class="page-footer card z-depth-5" style="padding:0; margin:0;">
-		<div class="footer-copyright">
-			<div class="container center hide-on-small-only">
-				&copy;
-				<script>
-					document.write(new Date().getFullYear());
-				</script> Palatina Films
-			</div>
-			<a class="btn btn-flat black-text right" href="mailto:palatina-films@gmail.com" data-target="">Kontakt</a>
-			<a class="btn btn-flat black-text right" href="#" onclick="loadPage('impressum.html');">Impressum & Datenschutz</a>
-		</div>
-	</footer>
+      function darkTheme() {
+        $('.main-menu-item').css('color', 'white')
+        $('.collapsible-header, .side-menu').css('background-color', '#444444')
+        $('.collapsible-body').css('background-color', '#555555')
+        $('#content').css('background-color', '#111111')
+        $('.flow-text').css('color', '#ffffff')
+        $('blockquote').css('color', '#ffffff')
+        $('#footer').css('background-color', '#444444')
+        $('.page-copyright').css('color', '#eeeeee')
+        $('#mainLogo').css('-webkit-filter', 'invert(1)')
+        $('#mainLogo').css('filter', 'invert(1)')
+        $('.header').css('background-color', '#444444')
+        $('.header').css('color', '#ffffff')
+      }
 
-
-	<!-- JS -->
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-90554019-2"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-		gtag('config', 'UA-90554019-2', { 'anonymize_ip': true });
-
-	</script>
-
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
-
-	<!--  Scripts-->
-	<script>
-		//OnLoad
-		$(document).ready(function () {
-			$(".button-collapse").sideNav({
-				menuWidth: 250,
-				closeOnClick: true,
-				draggable: true
-			});
-			var page = document.location.search.substr(3);
-			currPage = "none";
-			if (page) {
-				loadPage(page + '.html', document.location.hash);
-				currPage = page;
-			} else {
-				loadPage('main.html');
-				currPage = "main";
-			}
-		})
-
-		function loadPage(page, hash) {
-			var delay = 500;
-			if (page == currPage) {
-				return;
-			}
-			if (currPage == "none") {
-				delay = 0;
-			}
-			gtag('event', 'changePage', { 'anonymize_ip': true, 'event_label': page, 'event_category': 'navigation' });
-			$("#content").fadeOut(delay, function () {
-				$("#content").load(page, function (result) {
-					if (localStorage.darkTheme == "true") {
-						darkTheme();
-					}
-					$("#content").fadeIn(500);
-					$('.parallax').parallax();
-					if (result == "<h1>404 - Nicht gefunden!</h1>") {
-						loadPage('main.html');
-						currPage = "main";
-						Materialize.toast('Seite nicht gefunden!', 4000);
-					}
-					if (hash) {
-						$('html,body').animate({
-							scrollTop: $(hash).offset().top
-						}, 'slow');
-					}
-				});
-			});
-
-		}
-
-		function togDT() {
-			gtag('event', 'themeToggle', { 'anonymize_ip': true, 'event_category': 'design', 'event_label': localStorage.darkTheme == "true" ? 'light' : 'dark' });
-			if (localStorage.darkTheme == "true") {
-				localStorage.setItem("darkTheme", false);
-				window.location.reload(1);
-			} else {
-				localStorage.setItem("darkTheme", true);
-				darkTheme();
-			}
-		}
-
-		function darkTheme() {
-			$('.main-menu-item').css("color", "white");
-			$('.collapsible-header, .side-menu').css("background-color", "#444444");
-			$('.collapsible-body').css("background-color", "#555555");
-			$('#content').css("background-color", "#111111");
-			$('.flow-text').css("color", "#ffffff");
-			$('blockquote').css("color", "#ffffff");
-			$('#footer').css("background-color", "#444444");
-			$('.page-copyright').css("color", "#eeeeee");
-			$('#mainLogo').css("-webkit-filter", "invert(1)");
-			$('#mainLogo').css("filter", "invert(1)");
-			$('.header').css("background-color", "#444444");
-			$('.header').css("color", "#ffffff");
-		}
-
-		window.onpopstate = function (event) {
-			var page = document.location.search.substr(3);
-			if (page != currPage) {
-				//loadPage(page + '.html');
-			}
-		}
-
-	</script>
-
-</body>
-
+      window.onpopstate = function(event) {
+        var page = document.location.search.substr(3)
+        if (page != currPage) {
+          //loadPage(page + '.html');
+        }
+      }
+    </script>
+  </body>
 </html>
