@@ -178,8 +178,10 @@ main {
   z-index: 1;
 }
 
+
+
 .team-modal {
-  max-height: 90%;
+  height: 90% !important;
   min-width: 90%;
 }
 
