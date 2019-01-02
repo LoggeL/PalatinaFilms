@@ -183,6 +183,7 @@ main {
 .team-modal {
   height: 90% !important;
   min-width: 90%;
+  max-height: 95% !important;
 }
 
 .team-modal .col .flow-text {
